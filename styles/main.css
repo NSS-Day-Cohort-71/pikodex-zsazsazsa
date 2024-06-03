@@ -1,8 +1,14 @@
+body {
+    background: linear-gradient(0deg, rgba(143,34,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
 #title {
     text-align: center;
     font-family: copperplate;
     font-size: 5em;
     margin-top: 1rem;
+    margin-bottom: 0;
+    text-shadow: 3px 1px 11px rgba(73,34,172,0.6);
 }
 
 #container {
@@ -14,8 +20,39 @@
 }
 
 .piko-card {
+    background: linear-gradient(rgb(72, 72, 209) 80%, rgb(243, 243, 69));
     flex-basis: 25%;
-    margin: 3em;
+    margin: 2.5em;
+    border: 2px dashed whitesmoke;
+    border-radius: 1em;
+    padding: 15px;
+    transition: 
+        transform 2s,
+        backgrond 2s,
+        rotate 2s;
+        
+}
+
+.piko-card:hover {
+    rotate: 360deg;
+    background: linear-gradient(0deg, rgba(143,34,195,1) 0%, rgba(253,187,45,1) 100%);
+    transform: scale(1.25);
+    border: 2px dotted black;
+}
+
+.piko-card:hover .piko-name {
+    color: goldenrod;
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 3px 1px 11px rgba(73,34,172,0.6);
+}
+
+.piko-card:hover .piko-abilities {
+    color: greenyellow;
+}
+
+.piko-card:hover .piko-weakness {
+    color: palevioletred;
 }
 
 .piko-img {
@@ -23,13 +60,19 @@
     border-radius: 1em;
 }
 
-.piko-info {
+.piko-card:hover .piko-info{
     padding-left: 1.25rem;
+    display: block;
 }
 
-.info-text {
+.piko-card:hover .info-text {
     font-family: monospace;
     font-size: 1rem;
+    display: block;
+}
+
+.piko-info, .info-text {
+    display: none;
 }
 
 .piko-name {
@@ -38,13 +81,13 @@
 }
 
 .piko-abilities {
-
+    
 }
 
 .piko-category {
-
+    
 }
 
 .piko-weakness {
-
+    
 }
